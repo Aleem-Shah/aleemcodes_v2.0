@@ -1,33 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
 @tailwind base;
-@tailwind components;
-@tailwind utilities;
+  @tailwind components;
+  @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+  @layer utilities{
+    .btn{
+      @apply bg-[#58c6ed] p-3 w-[140px] mt-10 sm:w-[200px] xl:w-[300px] xl:h-[100px] xl:text-2xl
+    }
+    .sub-head{
+      @apply text-2xl sm:text-4xl md:text-6xl lg:text-7xl  
+    }
+    .head-decoration{
+      @apply text-[#8f6bf8] sm:text-2xl md:text-4xl lg:text-5xl xl:text-6xl
+    }
+    .head-text{
+      @apply text-[1rem] sm:text-[1.3rem] md:text-[1.6rem] text-[#e6db74]  lg:text-[2rem] xl:text-[2.5rem]
+    }
+    .page-head{
+      @apply text-center mt-10 text-4xl md:text-5xl lg:text-6xl xl:text-[4.123rem] 2xl:text-6xl
+    }
   }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  body{
+    background-color:   rgb(33, 33, 33);
+    /* background-color:   #000; */
+    color: #fff;
   }
-}
+  .vt323-regular {
+    font-family:  "VT323", monospace !important;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+
+  
